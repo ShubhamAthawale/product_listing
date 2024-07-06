@@ -1,0 +1,41 @@
+.content_wrapper{
+    padding: 20px 30px;
+    .create_btn_wrapper{
+        display: flex;
+        justify-content: end;
+        margin-bottom: 10px;
+    }
+    .btn_wrap{
+        display: flex;
+        gap: 10px;
+    }
+    .table_graph_wrap{
+        display: flex;
+        justify-content: space-between;
+      
+        
+        .custome_card{
+            border: 1px solid rgb(240 240 240);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        .table_wrap{
+            width: 58%;
+            padding: 0;
+         overflow: hidden;
+        }
+        .graph_wrap{
+            width: 40%;
+            position: relative;
+            padding-top: 50px;
+        }
+        @media screen and (max-width: 1280px) {
+            flex-direction: column-reverse;
+            gap: 20px ;
+            .table_wrap,.graph_wrap{
+                width: 100%;
+            }
+        }
+    }
+}

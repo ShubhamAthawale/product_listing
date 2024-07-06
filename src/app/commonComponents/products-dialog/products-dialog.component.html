@@ -1,0 +1,25 @@
+<form class="product_form" [formGroup]="productsForm" (submit)="submitProduct()">
+    <div>
+        <input type="text" pInputText  formControlName="productName" placeholder="Enter Product Name"/>
+        <div class="text-error" *ngIf="formControl.productName.touched && formControl.productName.errors">
+            Product Name required</div>
+    </div>
+    <div>
+        <p-dropdown [options]="categories" formControlName="category" optionLabel="" [showClear]="true" placeholder="Select a Category"></p-dropdown>
+        <div class="text-error" *ngIf="formControl.category.touched && formControl.category.errors">
+            Category required</div>
+    </div>   
+    <div>
+        <input type="text" pInputText  formControlName="price" placeholder="Enter Price"/>
+        <div class="text-error" *ngIf="formControl.price.touched && formControl.price.errors">
+            <div *ngIf="formControl.price.errors.required">Price is required</div>
+            <div *ngIf="formControl.price.errors.pattern">Price must be a number</div>
+          </div>
+    </div>
+    <div>
+        <input type="text" pInputText  formControlName="rating" placeholder="Enter Rating"/>
+        <div class="text-error" *ngIf="formControl.rating.touched && formControl.rating.errors">
+            Rating required</div>
+    </div>
+    <p-button label="Submit" type="submit" [disabled]="productsForm.invalid"></p-button>
+</form>

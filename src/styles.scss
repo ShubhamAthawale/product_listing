@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+    font-size: 12px;
+	scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    // font-size:1.4rem ;
+    margin: 0;
+    padding: 0;
+}
+
+.p-ripple{
+    background-color: #239b73;
+    border: 1px solid #239b73;
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+.p-ripple:hover{
+    background-color: white;
+    color: #239b73;
+    border: 1px solid #239b73;
+}
+.product_form .p-dropdown.p-component{
+    width: 80%;
+}
+
+.chart-legend {
+    position: absolute;
+    top: 10px; /* Example for placing legend below */
+    right: 10px;
+    // transform: translateX(-50%);
+    div{
+        width: 100% !important;
+       
+    }
+    .legend-labels{
+        display: flex !important;
+        max-width: unset;
+    }
+    .legend-title {
+        display: none;
+    }
+  }
+  .chart-container {
+    margin-right: 0; /* Remove right margin */
+    padding-right: 0; /* Remove right padding */
+  }
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+  
+  ngx-charts-bar-vertical {
+    flex: 1;
+    width: 100% !important;
+  }
+  .p-datatable .p-datatable-thead > tr > th{
+    padding: 2rem 1rem;
+  }
+  .text-error{
+    color: red;
+  }
